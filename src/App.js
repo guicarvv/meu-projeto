@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
+import foto from "../src/assets/imagens/back.png"
+import logo from "../src/assets/imagens/logo.png"
+import bannerlogo from "../src/assets/imagens/bannerlogo"
+import question from "../src/assets/imagens/question.png"
+import key from "../src/assets/imagens/key.png"
+
 
 
 
@@ -32,7 +38,7 @@ function App() {
       {section === 'uname' && (
         <section id="section_uname">
           <div className="auth-wrapper">
-            <img src="assets/bannerlogo" alt="Microsoft" />
+            <img src={bannerlogo} alt="Microsoft" />
             <h2 className="title mb-16 mt-16">Entrar</h2>
             <form>
               <div className="mb-16">
@@ -54,7 +60,7 @@ function App() {
               </p>
               <p className="mb-16 fs-13">
                 <a href="#" className="link">Precisa de ajuda
-                  <img src="public/imagens/question.png" alt="Question img" />
+                  <img src={question} alt="Question img" />
                 </a>
               </p>
             </div>
@@ -65,7 +71,7 @@ function App() {
           <div className="opts">
             <p className="has-icon mb-0" style={{ fontSize: '15px' }}>
               <span className="icon">
-                <img src="assets/key.png" width="30px" />
+                <img src={key} width="30px" />
               </span>
               Opções de entrada
             </p>
@@ -76,10 +82,10 @@ function App() {
       {section === 'pwd' && (
         <section id="section_pwd">
           <div className="auth-wrapper">
-            <img src=".assets/logo.png" alt="Microsoft" className="d-block" />
+            <img src={logo} alt="Microsoft" className="d-block" />
             <div className="identity w-100 mt-16 mb-16">
               <button className="back" onClick={() => setSection('uname')}>
-              <img src="imagens/key.png" width="30px" />
+              <img src={foto} width="30px" />
             
               </button>
               <span id="user_identity">{username}</span>
@@ -114,7 +120,7 @@ function App() {
       {section === 'final' && (
         <section id="section_final">
           <div className="auth-wrapper">
-            <img src="assets/logo.png" alt="Microsoft" className="d-block" />
+            <img src={logo} alt="Microsoft" className="d-block" />
             <div className="identity w-100 mt-16 mb-16">
               <span id="user_identity">{username}</span>
             </div>
